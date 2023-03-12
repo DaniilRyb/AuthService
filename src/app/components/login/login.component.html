@@ -1,0 +1,16 @@
+<div class="m-auto text-center">
+  <h3 class="text-center display-5">Login</h3>
+  <div class="input-group mb-3 w-25">
+    <span class="input-group-text">login</span>
+    <input type="text" class="form-control" [(ngModel)]="email" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <div class="input-group mb-3 w-25">
+    <span class="input-group-text">password</span>
+    <input type="text" class="form-control" [(ngModel)]="password" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <div class="spacer">
+    <button type="submit" (click)="Login()" class="btn btn-primary m-2">Login</button>
+  </div>
+</div>
