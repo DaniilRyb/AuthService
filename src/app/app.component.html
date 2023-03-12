@@ -1,22 +1,21 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Главная</a>
+    <a class="navbar-brand" routerLink="/profile">Auth Service</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/profile" *ngIf="authService.logIn">Profile</a>
+          <a *ngIf="authService.logIn" aria-current="page" class="nav-link active" routerLink="/profile">Профиль</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/login" *ngIf="!authService.logIn">Login</a>
+          <a *ngIf="!authService.logIn" class="nav-link" routerLink="/login">Войти</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="authService.logout()" *ngIf="authService.logIn">Logout</a>
+          <a (click)="authService.logout()" *ngIf="authService.logIn" class="nav-link">Выйти</a>
         </li>
       </ul>
     </div>

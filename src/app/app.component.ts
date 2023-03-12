@@ -11,4 +11,11 @@ export class AppComponent {
   constructor(public authService: AuthService) {
   }
 
+  IsLogin() {
+    if (localStorage.getItem("auth_token")) {
+      return false
+    } else return true
+  }
+
+
 }

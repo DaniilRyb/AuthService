@@ -11,8 +11,7 @@ export class ProfileAuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (localStorage.getItem("auth_token")) {
       return true
-    }
-     else return false
+    } else return false
   }
 
 }
